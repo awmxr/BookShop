@@ -1,0 +1,20 @@
+﻿@model IEnumerable<test.Models.Book>
+
+@{
+    ViewData["Title"] = "Gallery";
+}
+
+<form method = "get" class="form-inline">
+    <input name = "term" value = @ViewData["term"] class ="form-control" style = "width:300px" />
+    <button type="submit" class ="btn-primary btn-primary">Search</button>
+
+</form>
+
+@foreach(var item in Model){
+
+   <partial name = "_BookItem" model = "item" />
+     
+    
+    
+    <hr />
+}
